@@ -1,0 +1,18 @@
+[package]
+name = "duckdb-ext-core"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+license = "Apache-2.0"
+
+[dependencies]
+ort = { version = "=2.0.0-rc.10", default-features = false, features = ["std", "load-dynamic"] }
+sha2 = "0.10"
+reqwest = { version = "0.13", default-features = false, features = ["blocking", "rustls"] }
+tempfile = "3"
+flate2 = "1"
+tar = "0.4"
+# Cargo.lock keeps the transitive Xet crates on 1.5.3 for Rust 1.89 compatibility.
+hf-hub = { version = "=1.0.0", default-features = false, features = ["blocking", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

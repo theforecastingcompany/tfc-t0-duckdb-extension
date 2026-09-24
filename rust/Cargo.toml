@@ -1,0 +1,25 @@
+[package]
+name = "duckdb-ext"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+license = "Apache-2.0"
+
+[lib]
+name = "tfc_forecast"
+crate-type = ["cdylib"]
+
+[dependencies]
+duckdb = { version = "=1.10504.0", features = ["loadable-extension", "vscalar"] }
+duckdb-ext-core = { path = "core" }
+
+# Keep the extension and inference core in one Rust workspace.
+[workspace]
+resolver = "3"
+members = ["core"]
+
+[profile.release]
+strip = true
+
+[profile.dev.package.sha2]
+opt-level = 3

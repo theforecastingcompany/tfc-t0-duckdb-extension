@@ -1,0 +1,120 @@
+[
+  {
+    "id": "t0-alpha-onnx-int8",
+    "repository": "theforecastingcompany/t0-alpha-onnx-int8",
+    "revision": "1c18a3e2296fa8afdf6daf471de16628a9b5eea8",
+    "filename": "t0-alpha-grouped-int8.onnx",
+    "sha256": "82da43921c6b171a9f6ca8bd701f9a7923806438c3e95fd4eadbeda0cb03ed98",
+    "bytes": 107151882,
+    "interface": "t0-grouped-v1",
+    "quantile_levels": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "max_context": 4096,
+    "metadata_files": [
+      "LICENSE",
+      "config.json"
+    ]
+  },
+  {
+    "id": "t0-alpha-onnx-fp16",
+    "repository": "theforecastingcompany/t0-alpha-onnx-fp16",
+    "revision": "9f5a8a9e7aa296880d60207612179afca3bf7c06",
+    "filename": "t0-alpha-grouped-fp16.onnx",
+    "sha256": "4956fe25e10c1392a03d750adc7cce190933d8d6f477fa4c4c9c11a00fae6d4f",
+    "bytes": 208142530,
+    "interface": "t0-grouped-v1",
+    "quantile_levels": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "max_context": 4096,
+    "metadata_files": [
+      "LICENSE",
+      "config.json"
+    ]
+  },
+  {
+    "id": "t0-beta-onnx-int8",
+    "repository": "theforecastingcompany/t0-beta-onnx-int8",
+    "revision": "6e43e99cad6390ac3c32a77c2e3fa7e8148007c1",
+    "filename": "t0-beta-grouped-int8.onnx",
+    "sha256": "2c517869aac22518c1e04a35386a739d2656490574a40ea9a31187f4f115ac9b",
+    "bytes": 269070420,
+    "interface": "t0-grouped-v1",
+    "quantile_levels": [
+      0.01,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.99
+    ],
+    "max_context": 8192,
+    "metadata_files": [
+      "LICENSE",
+      "NOTICE",
+      "config.json"
+    ]
+  },
+  {
+    "id": "t0-beta-onnx-fp16",
+    "repository": "theforecastingcompany/t0-beta-onnx-fp16",
+    "revision": "38e0506174031c70bbc2c7202af90eeed93be0ea",
+    "filename": "t0-beta-grouped-fp16.onnx",
+    "sha256": "321c0c80b6ee1310519f545b6b42ede9705a83f8db13096cf9c623543f345a83",
+    "bytes": 511901988,
+    "interface": "t0-grouped-v1",
+    "quantile_levels": [
+      0.01,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.99
+    ],
+    "max_context": 8192,
+    "metadata_files": [
+      "LICENSE",
+      "NOTICE",
+      "config.json"
+    ]
+  }
+]
