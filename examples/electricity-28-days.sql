@@ -94,9 +94,9 @@ SELECT CASE WHEN
          WHERE b.n = 24 AND c.n = 24
            AND abs(s.history_mae - b.mae) < 0.001
            AND abs(s.covariate_mae - c.mae) < 0.001) = 28
-    AND ((SELECT model FROM tfc_models()) <> 't0-beta-onnx-fp16' OR (SELECT abs(avg(history_mae) - 9.5223376354) < 0.001
-         AND abs(avg(covariate_mae) - 4.1338665060) < 0.001
-         AND count(*) FILTER (WHERE covariate_mae < history_mae) = 27
+    AND ((SELECT model FROM tfc_models()) <> 't0-beta-onnx-fp16' OR (SELECT abs(avg(history_mae) - 9.5191390401) < 0.001
+         AND abs(avg(covariate_mae) - 3.9596077772) < 0.001
+         AND count(*) FILTER (WHERE covariate_mae < history_mae) = 28
          FROM daily_scores))
     THEN true ELSE error('28-day electricity verification failed') END AS daily_verified;
 

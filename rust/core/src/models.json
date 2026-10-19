@@ -2,10 +2,10 @@
   {
     "id": "t0-alpha-onnx-int8",
     "repository": "theforecastingcompany/t0-alpha-onnx-int8",
-    "revision": "1c18a3e2296fa8afdf6daf471de16628a9b5eea8",
+    "revision": "95c0ad00fbb08d1bd5f72d3e6274f6f2e80f45c0",
     "filename": "t0-alpha-grouped-int8.onnx",
-    "sha256": "82da43921c6b171a9f6ca8bd701f9a7923806438c3e95fd4eadbeda0cb03ed98",
-    "bytes": 107151882,
+    "sha256": "926b07de80d8aaed59d3bb74a3db014f7c9e6e5f4f08942f532d7f60e7ca0747",
+    "bytes": 103571340,
     "interface": "t0-grouped-v1",
     "quantile_levels": [
       0.1,
@@ -23,10 +23,10 @@
   {
     "id": "t0-alpha-onnx-fp16",
     "repository": "theforecastingcompany/t0-alpha-onnx-fp16",
-    "revision": "9f5a8a9e7aa296880d60207612179afca3bf7c06",
+    "revision": "0490724df0223a5dd8078e09dccfff243d06c017",
     "filename": "t0-alpha-grouped-fp16.onnx",
-    "sha256": "4956fe25e10c1392a03d750adc7cce190933d8d6f477fa4c4c9c11a00fae6d4f",
-    "bytes": 208142530,
+    "sha256": "a09f0eb974caa224139c3bd83e78825b1c9fc28d8de81099bb1b3cb965159cb8",
+    "bytes": 203962049,
     "interface": "t0-grouped-v1",
     "quantile_levels": [
       0.1,
@@ -44,10 +44,10 @@
   {
     "id": "t0-beta-onnx-int8",
     "repository": "theforecastingcompany/t0-beta-onnx-int8",
-    "revision": "6e43e99cad6390ac3c32a77c2e3fa7e8148007c1",
+    "revision": "e6ae67765865ed371e2924a90e808415e5e05d43",
     "filename": "t0-beta-grouped-int8.onnx",
-    "sha256": "2c517869aac22518c1e04a35386a739d2656490574a40ea9a31187f4f115ac9b",
-    "bytes": 269070420,
+    "sha256": "9d3e164e9895d718d9104a9e0a9b22fce3b34e2a6e4cfeb2ff26591568fc002c",
+    "bytes": 269126244,
     "interface": "t0-grouped-v1",
     "quantile_levels": [
       0.01,
@@ -82,10 +82,10 @@
   {
     "id": "t0-beta-onnx-fp16",
     "repository": "theforecastingcompany/t0-beta-onnx-fp16",
-    "revision": "38e0506174031c70bbc2c7202af90eeed93be0ea",
+    "revision": "feac67c112463e21c1ef93dae3981aaa4d79ef22",
     "filename": "t0-beta-grouped-fp16.onnx",
-    "sha256": "321c0c80b6ee1310519f545b6b42ede9705a83f8db13096cf9c623543f345a83",
-    "bytes": 511901988,
+    "sha256": "061e1cd100c565c2bd3d3bb222664ac0d4399859d1dcf4cb55f3f52d7d02a7ed",
+    "bytes": 512020295,
     "interface": "t0-grouped-v1",
     "quantile_levels": [
       0.01,

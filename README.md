@@ -56,8 +56,8 @@ duckdb -unsigned -cmd "LOAD '$PWD/build/tfc_forecast.duckdb_extension';"
 
 | `TFC_MODEL` | Download | Maximum context | Native quantiles |
 | --- | ---: | ---: | ---: |
-| `t0-alpha-onnx-int8` (default) | 107 MB | 4,096 | 5 |
-| `t0-alpha-onnx-fp16` | 208 MB | 4,096 | 5 |
+| `t0-alpha-onnx-int8` (default) | 104 MB | 4,096 | 5 |
+| `t0-alpha-onnx-fp16` | 204 MB | 4,096 | 5 |
 | `t0-beta-onnx-int8` | 269 MB | 8,192 | 21 |
 | `t0-beta-onnx-fp16` | 512 MB | 8,192 | 21 |
 
@@ -65,8 +65,8 @@ Only the selected model is downloaded. Restart DuckDB to switch models; use
 `unset TFC_MODEL` to return to the default. `SELECT * FROM tfc_models();` shows
 the loaded model, revision, quantiles and context limit. The existing
 `TFC_MODEL_CONFIG` custom-manifest override takes precedence over `TFC_MODEL`.
-The blog's published results use `t0-beta-onnx-fp16`; select that model to
-reproduce its scores with `just electricity`.
+The blog uses `t0-beta-onnx-fp16`; select that model to run its example with
+`just electricity`. Scores reflect the currently pinned artifacts.
 
 `just release` builds the extension, and the command above loads it into DuckDB.
 Repeat `LOAD` in each new session; no separate `INSTALL` is needed for this preview.
@@ -74,7 +74,7 @@ The Rust selection applies to this shell. In a new shell, repeat
 `export RUSTUP_TOOLCHAIN=1.89.0` if your default Rust is older.
 
 The first `LOAD` creates `TFC_CACHE_DIR` automatically and downloads the
-[selected model](rust/core/src/models.json) (107 MB for the default) and ONNX Runtime 1.29.0.
+[selected model](rust/core/src/models.json) (104 MB for the default) and ONNX Runtime 1.29.0.
 **This can take several minutes without visible progress**; wait for DuckDB's
 `D` prompt. Keep the same cache path to avoid downloading again. Both binaries
 are checksum-verified on each load.
@@ -246,8 +246,8 @@ SELECT * FROM tfc_evaluate(
 SELECT id, n, mae, rmse, mase FROM baseline_evaluation;
 ```
 
-Expected result for `DE`: **24 observations**, **MAE 6.18605**, **RMSE 6.95502**
-and **MASE 0.47982** with the default alpha INT8 model. Small floating-point differences are possible.
+Expected result for `DE`: **24 observations**, **MAE 6.19199**, **RMSE 6.96247**
+and **MASE 0.48028** with the default alpha INT8 model. Small floating-point differences are possible.
 
 Returns one row per series with `n, mae, mse, rmse, mape, smape, mase`, plus IDs,
 model and revision. Loading `tfc_forecast` registers both forecast and evaluation
@@ -334,8 +334,8 @@ Results below use the default **T0-alpha INT8** model; other variants differ.
 
 | Inputs | MAE | RMSE | MASE |
 | --- | ---: | ---: | ---: |
-| Price history only | 6.18605 | 6.95502 | 0.47982 |
-| History + load/renewables forecasts | 2.21409 | 2.96931 | 0.17173 |
+| Price history only | 6.19199 | 6.96247 | 0.48028 |
+| History + load/renewables forecasts | 1.98174 | 2.70430 | 0.15371 |
 
 Supply `covariate_cols` and `future_table` together. Covariates must be numeric,
 finite and non-NULL. They cannot reuse target, timestamp or ID column names.

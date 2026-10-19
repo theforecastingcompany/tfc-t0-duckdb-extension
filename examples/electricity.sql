@@ -11,8 +11,8 @@ SELECT CASE WHEN (SELECT count(*) FROM history)=512
  AND (SELECT count(*) FROM future_inputs)=24
  AND (SELECT count(*) FROM forecast_result)=24
  AND (SELECT count(*) FROM forecast_with_covariates)=24
- AND (SELECT model <> 't0-beta-onnx-fp16' OR abs(mae-6.527077754338582)<0.001 FROM baseline_evaluation)
- AND (SELECT model <> 't0-beta-onnx-fp16' OR abs(mae-2.289589246114095)<0.001 FROM evaluation_result)
+ AND (SELECT model <> 't0-beta-onnx-fp16' OR abs(mae-6.520642598470052)<0.001 FROM baseline_evaluation)
+ AND (SELECT model <> 't0-beta-onnx-fp16' OR abs(mae-2.066959540049235)<0.001 FROM evaluation_result)
  THEN true ELSE error('Local ONNX demo verification failed') END AS verified;
 
 COPY (SELECT * FROM history ORDER BY id, date)
