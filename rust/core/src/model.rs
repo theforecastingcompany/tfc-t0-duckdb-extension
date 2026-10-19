@@ -185,7 +185,7 @@ mod tests {
             assert_eq!(spec.max_context(), if alpha { 4096 } else { 8192 });
             assert_eq!(spec.metadata_files().iter().any(|s| s == "NOTICE"), !alpha);
         }
-        assert_eq!(ModelSpec::named(DEFAULT_MODEL).unwrap().bytes, 107151882);
+        assert_eq!(ModelSpec::named(DEFAULT_MODEL).unwrap().bytes, 103571340);
         assert!(ModelSpec::named("unknown").is_err());
     }
 
